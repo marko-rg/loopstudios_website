@@ -1,2 +1,2 @@
-#Loopstudios website
-##Practice project
+# Loopstudios website
+## Practice project
