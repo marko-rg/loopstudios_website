@@ -1,0 +1,116 @@
+.footer {
+	background-color: $color-black;
+	padding: 5rem 2rem;
+	
+
+  &__wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+		gap: 2rem;
+		@media only screen and (max-width: $bp-tablet) {
+			grid-template-columns: 1fr;
+			align-items: center;
+			justify-content: center;
+    }
+	}
+	
+	&__logo {
+		@media only screen and (max-width: $bp-tablet) {
+			align-self: center;
+			justify-self: center;
+			
+    }
+	}
+
+  &__copyright {
+		color: $color-dark-gray;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		@media only screen and (max-width: $bp-tablet) {
+      justify-content: center;
+    }
+  }
+}
+
+.social {
+	list-style: none;
+
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	@media only screen and (max-width: $bp-tablet) {
+		justify-content: center;
+	}
+
+	&__link:link,
+	&__link:visited {
+		padding: 1rem;
+		position: relative;
+		transition: all .2s;
+	}
+	
+	&__link:hover,
+	&__link:active {
+		opacity: 0.7;
+	}
+
+	&__link::after{
+		content: '';
+		position: absolute;
+		left: 50%;
+		bottom: 0%;
+		height: 1px;
+		width: 50%;
+		background-color: $color-white;
+		transform: translateX(-50%);
+		opacity: 0;
+		transition: all .2s;
+	}
+
+	&__link:hover::after,
+	&__link:active::after {
+		opacity: 1;
+	}
+}
+
+.nav {
+	list-style: none;
+	display: flex;
+	@media only screen and (max-width: $bp-tablet) {
+		grid-row: 2 / 3;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		font-size: 3rem;
+	}
+
+	&__item {
+		flex: 0 0 18%;
+	}
+
+  &__link {
+		text-decoration: none;
+		padding-bottom: 1rem;
+		color: $color-white;
+		position: relative;
+		transition: all .2s;
+	}
+	
+	&__link::after {
+		content: '';
+		position: absolute;
+		bottom: 0%;
+		left: 50%;
+		height: 1px;
+		width: 70%;
+		background-color: currentColor;
+		transform: translateX(-50%);
+		opacity: 0;
+	}
+
+	&__link:hover::after,
+  &__link:active::after {
+      opacity: 1;
+  }
+}

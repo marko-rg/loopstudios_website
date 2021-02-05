@@ -1,0 +1,83 @@
+.card {
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover &__img {
+    opacity: 0.4;
+  }
+
+  &:hover &__title {
+    color: $color-black;
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    transition: all 0.2s;
+
+    &--earth {
+      @media only screen and (max-width: $bp-tablet) {
+        content: url(/images/mobile/image-deep-earth.jpg);
+      }
+    }
+    &--arcade {
+      @media only screen and (max-width: $bp-tablet) {
+        content: url(/images/mobile/image-night-arcade.jpg);
+      }
+    }
+    &--soccer {
+      @media only screen and (max-width: $bp-tablet) {
+        content: url(/images/mobile/image-soccer-team.jpg);
+      }
+    }
+    &--car {
+      @media only screen and (max-width: $bp-tablet) {
+        content: url(/images/mobile/image-grid.jpg);
+      }
+    }
+    &--road {
+      @media only screen and (max-width: $bp-tablet) {
+        content: url(/images/mobile/image-from-above.jpg);
+      }
+    }
+    &--borealis {
+      @media only screen and (max-width: $bp-tablet) {
+        content: url(/images/mobile/image-pocket-borealis.jpg);
+      }
+    }
+    &--robot {
+      @media only screen and (max-width: $bp-tablet) {
+        content: url(/images/mobile/image-curiosity.jpg);
+      }
+    }
+    &--fisheye {
+      @media only screen and (max-width: $bp-tablet) {
+        content: url(/images/mobile/image-fisheye.jpg);
+      }
+    }
+  }
+
+
+  &__title {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    color: $color-white;
+    z-index: 1;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 300;
+    font-family: $font-secondary;
+    line-height: 1.1;
+    width: 70%;
+    transition: all 0.2s;
+
+    @media only screen and (max-width: $bp-tablet) {
+        font-size: 5rem;
+        width: 50%;
+        bottom: 20%;
+      }
+
+  }
+}

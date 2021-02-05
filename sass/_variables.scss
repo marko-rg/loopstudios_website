@@ -1,0 +1,15 @@
+// fonts
+$font-primary: 'Alata', sans-serif;
+$font-secondary: 'Josefin Sans', sans-serif;
+// colors
+$color-white: hsl(0, 0%, 100%);
+$color-black: hsl(0, 0%, 0%);
+$color-gray: hsl(0, 0%, 55%);
+$color-dark-gray: hsl(0, 0%, 41%);
+
+$bp-tablet: 65em;
+
+.container {
+	max-width: 104rem;
+	margin: 0 auto;
+ }

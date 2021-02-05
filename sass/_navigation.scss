@@ -1,0 +1,55 @@
+.navigation {
+  padding: 5rem 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__menu {
+    list-style: none;
+    display: flex;
+    @media only screen and (max-width: $bp-tablet) {
+      display: none;
+    }
+  }
+
+  &__link:link,
+  &__link:visited {
+    text-decoration: none;
+    color: $color-white;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    position: relative;
+  }
+
+  &__link::after {
+    content: '';
+    position: absolute;
+    left: 30%;
+    bottom: 0%;
+    width: 40%;
+    height: 1px;
+    background-color: currentColor;
+    opacity: 0;
+    transition: all 0.2s;
+  }
+
+  &__link:hover::after,
+  &__link:active::after {
+    opacity: 1;
+  }
+
+  &__burger {
+    display: none;
+    padding: 1rem;
+    height: 4rem;
+    width: 4rem;
+    &--icon {
+      display: block;
+      fill: $color-white;
+    }
+    @media only screen and (max-width: $bp-tablet) {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+.story {
+	margin: 15rem auto;
+	position: relative;
+	@media only screen and (max-width: $bp-tablet) {
+		padding: 2rem;
+	}
+
+
+  &__title {
+		margin: 5rem auto;
+    display: flex;
+    justify-content: space-between;
+		align-items: center;
+  }
+
+  &__btn:link,
+  &__btn:visited {
+		display: inline-block;
+    text-decoration: none;
+		text-transform: uppercase;
+		text-align: center;
+		font-family: $font-primary;
+		font-weight: 300;
+		letter-spacing: 3px;
+		line-height: .7;
+		color: $color-black;
+		border: 2px solid $color-dark-gray;
+		border-radius: 3px;
+		outline: none;
+		padding: 1.2rem 2.5rem;
+		@media only screen and (max-width: $bp-tablet) {
+			padding: 2.5rem 5rem;
+			font-size: 2rem;
+			position: absolute;
+			bottom: -3%;
+			left: 50%;
+			transform: translateX(-50%);
+		 }
+	}
+	
+	&__btn:hover,
+	&__btn:active {
+		color: $color-white;
+		background-color: $color-black;
+		border: 2px solid $color-black;
+	}
+
+	&__wrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 3rem;
+		@media only screen and (max-width: $bp-tablet) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "loopstudios_website",
+  "version": "1.0.0",
+  "description": "portfolio website loopstudios",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "marko ralic grujic",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
